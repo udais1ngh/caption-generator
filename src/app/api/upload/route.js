@@ -2,9 +2,9 @@
 import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import uniqid from 'uniqid';
 
-const accessKeyId = process.env.AWS_ACCESS_KEY;
-const secretAccessKey = process.env.AWS_SECRERT_ACCESS_KEY;
-const BucketName = process.env.BUCKET_NAME;
+const accessKeyId = process.env.ACCESS_KEY;
+const secretAccessKey = process.env.SECRERT_ACCESS_KEY;
+const BucketName = process.env.BUCKET;
 
 export async function POST(req){
     const formData = await req.formData();
