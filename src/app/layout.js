@@ -1,3 +1,4 @@
+import Header from '@/components/Header'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -10,8 +11,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      
+      
+      <body className={inter.className +" bg-gradient-to-b from-[#000000] to-[#130F40] min-h-screen" }>
+        <div className='mt-4' >
+        <Header/>
+        {children}
+        </div>
+        </body>
     </html>
   )
 }
